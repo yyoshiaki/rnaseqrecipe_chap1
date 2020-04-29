@@ -20,3 +20,21 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 ```
+
+## samtoolsがインストールできない場合
+
+書籍の方法でもsamtoolsが適切にインストールできない場合、以下のようにソースからビルドする。なお、パスの通し方に関してはネット上の文献等を参照してください。
+
+```
+% cd ~
+% mkdir Programs
+% cd Programs
+% curl -L https://github.com/samtools/samtools/releases/download/1.10/samtools-1.10.tar.bz2 > samtools-1.10.tar.bz2\ntar -jxvf % samtools-1.10.tar.bz2
+% cd samtools-1.10
+% ./configure --prefix=/usr/local/
+% make -j 8
+% make install
+% ./samtools
+% open -e ~/.zshrc  # PATHに$HOME/Programs/samtools-1.10を追加。
+% source ~/.zshrc
+```
