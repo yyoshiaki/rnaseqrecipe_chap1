@@ -1,8 +1,14 @@
-# RNA-Seqデータ解析　WETラボのための鉄板レシピ Chapter1 AnnualUpdate
+# RNA-Seqデータ解析　WETラボのための鉄板レシピ Chapter1 AnnualUpdate  2020/11/05 
 
-## Anaconda installのzshへの対応 2020/04/29
+## Anaconda
 
-zshを使用する場合、`~/.zshrc`に以下のanacondaを読み込む処理を追記する必要がある。将来的にanacondaが対応してくれることが予想される。`~/.zshrc`を編集するには`% open -e ~/.zshrc`をターミナルから実行する。追記後はターミナルを再起動。なお、`.zshrc`は重要なzshの設定ファイルで破損すると容易にターミナルが立ち上がらなくなる。よく吟味しながら編集すること。
+ダウンロードリンクが[https://www.anaconda.com/products/individual](https://www.anaconda.com/products/individual)へ変更されている。バージョンも3.8へ。
+
+## Anaconda installのzshへの対応
+
+condaはインストール時に、`~/.bash_profile`というbashの設定ファイルにconda自動立ち上げに関する処理を追記する。一方、2019年にデフォルトとなったzshではこの設定が反映されていないため、手動で対応しなければならない。以下に2つの解決方法をあげる。また、この手順は今後のanacondaのアップデートで不要になる可能性があるので常にインストール前に確認してほしい。
+
+1. `~/.bash_profile`の内容を`~/.zshrc`に追記する。`~/.zshrc`を編集するには`% open -e ~/.zshrc`をターミナルから実行する。追記後はターミナルを再起動。なお、`.zshrc`は重要なzshの設定ファイルで破損すると容易にターミナルが立ち上がらなくなる。よく吟味しながら編集すること。
 
 ```
 # >>> conda initialize >>>
@@ -20,6 +26,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 ```
+
+2. `source ~/.bash_profile` という一文を`~/.zshrc`に追加する。
+
+## Rの最新版が4.0.3へとバージョンアップされている。
 
 ## samtoolsがインストールできない場合 2020/04/29
 
