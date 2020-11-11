@@ -29,11 +29,19 @@ unset __conda_setup
 
 2. `source ~/.bash_profile` という一文を`~/.zshrc`に追加する。
 
+## brew install
+
+推奨インストール方法が以下へと変更されていた。
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
 ## Rの最新版が4.0.3へとバージョンアップされている。
 
 ## samtoolsがインストールできない場合 2020/04/29
 
-書籍の方法でもsamtoolsが適切にインストールできない場合、以下のようにソースからビルドする。なお、パスの通し方に関してはネット上の文献等を参照してください。
+書籍の方法でもsamtoolsが適切にインストールできない場合、以下のようにソースからビルドする。なお、パスの通し方に関してはネット上の文献等を参照のこと。
 
 ```
 % cd ~
@@ -48,3 +56,5 @@ unset __conda_setup
 % open -e ~/.zshrc  # PATHに$HOME/Programs/samtools-1.10を追加。
 % source ~/.zshrc
 ```
+
+詳細は公式サイト（http://www.htslib.org/download/）を参照。
