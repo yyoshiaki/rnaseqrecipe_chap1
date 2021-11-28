@@ -1,3 +1,8 @@
+# RNA-Seqデータ解析　WETラボのための鉄板レシピ Chapter1 AnnualUpdate  2021/11/28
+
+## M1 Macについて
+M1 Macではbiocondaを用いたツールインストールなどが現状できない。dockerを用いるか、ワークステーションなどを別途用意することが必要。また、[遺伝研スパコン](https://sc.ddbj.nig.ac.jp/)は基本無償使用可能。
+
 # RNA-Seqデータ解析　WETラボのための鉄板レシピ Chapter1 AnnualUpdate  2020/11/05 
 
 ## Anaconda
